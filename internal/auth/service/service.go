@@ -4,9 +4,10 @@ import (
 	"crypto/rand"
 	"encoding/base64"
 	"errors"
-	"github.com/artemxgod/forum/internal/auth/domain"
-	"golang.org/x/crypto/bcrypt"
 	"time"
+
+	"github.com/chizheg/forum/internal/auth/domain"
+	"golang.org/x/crypto/bcrypt"
 )
 
 type service struct {
@@ -104,4 +105,4 @@ func (s *service) generateToken() (string, error) {
 		return "", err
 	}
 	return base64.URLEncoding.EncodeToString(b), nil
-} 
+}

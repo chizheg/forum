@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/artemxgod/forum/internal/auth/domain"
+	"github.com/chizheg/forum/internal/auth/domain"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"golang.org/x/crypto/bcrypt"

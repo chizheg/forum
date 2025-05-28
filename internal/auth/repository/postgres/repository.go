@@ -4,7 +4,8 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	"github.com/artemxgod/forum/internal/auth/domain"
+
+	"github.com/chizheg/forum/internal/auth/domain"
 )
 
 type repository struct {
@@ -153,4 +154,4 @@ func (r *repository) DeleteSession(token string) error {
 	}
 
 	return nil
-} 
+}

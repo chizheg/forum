@@ -2,8 +2,9 @@ package grpc
 
 import (
 	"context"
-	"github.com/artemxgod/forum/internal/auth/domain"
-	pb "github.com/artemxgod/forum/proto"
+
+	"github.com/chizheg/forum/internal/auth/domain"
+	pb "github.com/chizheg/forum/proto"
 	"go.uber.org/zap"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -68,4 +69,4 @@ func (s *AuthServer) ValidateToken(ctx context.Context, req *pb.ValidateTokenReq
 		Valid:  true,
 		UserId: int32(userID),
 	}, nil
-} 
+}

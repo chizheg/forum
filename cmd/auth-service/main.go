@@ -2,17 +2,18 @@ package main
 
 import (
 	"fmt"
-	"github.com/artemxgod/forum/internal/auth/delivery/grpc"
-	"github.com/artemxgod/forum/internal/auth/repository/postgres"
-	"github.com/artemxgod/forum/internal/auth/service"
-	"github.com/artemxgod/forum/pkg/database"
-	"github.com/artemxgod/forum/pkg/logger"
-	pb "github.com/artemxgod/forum/proto"
-	"google.golang.org/grpc"
 	"net"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/chizheg/forum/internal/auth/delivery/grpc"
+	"github.com/chizheg/forum/internal/auth/repository/postgres"
+	"github.com/chizheg/forum/internal/auth/service"
+	"github.com/chizheg/forum/pkg/database"
+	"github.com/chizheg/forum/pkg/logger"
+	pb "github.com/chizheg/forum/proto"
+	"google.golang.org/grpc"
 )
 
 const (
@@ -72,4 +73,4 @@ func main() {
 
 	log.Info("Shutting down gRPC server...")
 	s.GracefulStop()
-} 
+}

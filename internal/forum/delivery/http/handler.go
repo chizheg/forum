@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/artemxgod/forum/internal/forum/domain"
+	"github.com/chizheg/forum/internal/forum/domain"
 	"github.com/gorilla/websocket"
 	"go.uber.org/zap"
 )

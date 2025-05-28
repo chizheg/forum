@@ -2,10 +2,11 @@ package middleware
 
 import (
 	"context"
-	"github.com/artemxgod/forum/proto"
-	"google.golang.org/grpc"
 	"net/http"
 	"strings"
+
+	"github.com/chizheg/forum/proto"
+	"google.golang.org/grpc"
 )
 
 type AuthMiddleware struct {
@@ -75,4 +76,4 @@ func (m *AuthMiddleware) OptionalAuth(next http.HandlerFunc) http.HandlerFunc {
 		ctx := context.WithValue(r.Context(), "userID", int(resp.UserId))
 		next.ServeHTTP(w, r.WithContext(ctx))
 	}
-} 
+}
